@@ -1,14 +1,15 @@
 ---
 title: "Exploring US Inflation With R"
 description: |
-  A short description of the post.
+  US Inflation, as measured by Bureau of Labor Statistics (BLS)
 author:
   - name: Arham Choudhury
     url: https://arhamchoudhury.com/
-date: 2022-04-20
+date: 2022-08-01
 output:
   distill::distill_article:
-    self_contained: false
+    self_contained: true
+    code_folding: true
 ---
 
 **This is inspired by a Jonathan Regenstein twitter post from Dec 6th, 2021.**   
