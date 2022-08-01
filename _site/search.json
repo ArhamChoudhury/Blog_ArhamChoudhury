@@ -3,17 +3,17 @@
     {
       "path": "about.html",
       "title": "About this blog",
-      "description": "Some additional details about the blog",
+      "description": "A Data Science Blog  \nR, Python, SQL",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-08-01T16:10:58-05:00"
+      "last_modified": "2022-08-01T17:06:09-05:00"
     },
     {
       "path": "index.html",
       "title": "Arham's Blog",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-08-01T16:10:59-05:00"
+      "last_modified": "2022-08-01T17:06:10-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
