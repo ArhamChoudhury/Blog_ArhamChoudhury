@@ -1,0 +1,17 @@
+name: "Arham Choudhury"
+title: "Arham's Blog"
+description: |
+  A Data Science Blog
+  R, Python, SQL
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+  logo:
+      image: images/logo.png
+favicon: images/favicon2.ico
+output: distill::distill_article
+
