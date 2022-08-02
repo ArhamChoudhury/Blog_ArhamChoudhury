@@ -1,7 +1,7 @@
 ---
 title: "NYC Pizza"
 description: |
-  Whats a Good Pizza Place for a Data Scienctist in NYC?
+  What is a Good Pizza Place for a Data Scienctist in NYC?
 author:
   - name: Arham Choudhury
     url: https://arhamchoudhury.com/
@@ -21,7 +21,7 @@ for an interactive look at this question, I used Jared's pizza poll data and bui
 
 Shiny App: https://pizzaframe.com/
 
-**Top five pizza places by score are**  
+**Top five pizza places by score**  
 (1) Patsy's (2) Tappo (3) Williamsburg Pizza (4) Naples 45  (5) Bleeker Street Pizza
 
 ```{r, echo = FALSE, fig.align = 'center', out.width = '60%', results = 'markup'} 
@@ -40,14 +40,14 @@ knitr::include_graphics("https://github.com/ArhamChoudhury/Blog_ArhamChoudhury/b
 
 *One more wrinkle!* Jared has ordered pizza from some places more than once. Maybe those are better than the rest and should be analyzed as a separate group. This filter exists in the shiny app.
 
-**Top 5 - Only Among Repeat Orders**  
+**Top 5 - Only Among Repeat Orders**
 (1) Tappo (2) Rocky's (3) Fiore's (4) Little Italy Pizza (5) Stella's Pizza
+
 ```{r, echo = FALSE, fig.align = 'center', out.width = '60%', results = 'markup'} 
 knitr::include_graphics("https://github.com/ArhamChoudhury/Blog_ArhamChoudhury/blob/main/images/Top5_repeat_orders.jpg?raw=true")  
 ```
-
+  
 
 Next time you are in NYC, be sure to check out some of these pizza places!
 
-#
 

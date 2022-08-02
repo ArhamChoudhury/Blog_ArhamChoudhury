@@ -1,7 +1,7 @@
 ---
 title: "Inflation"
 description: |
-  Should we expect US inflation to last another year or more?
+  Will US inflation last another year or more?
 author:
   - name: Arham Choudhury
     url: https://arhamchoudhury.com/
