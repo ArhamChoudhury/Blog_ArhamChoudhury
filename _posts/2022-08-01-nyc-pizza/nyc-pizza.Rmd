@@ -11,7 +11,9 @@ output:
     self_contained: false
 ---
 
-Lets say that you, a data scientist, are visiting NYC and would like to have some pizza. The sheer number of choices can be overwhelming! To narrow things down, lets focus on pizza places that have been highly rated by fellow data scientists. Fortunately, the perfect data set for this exercise exists!!
+Lets say that you, a data scientist, are visiting NYC and would like to have some pizza. The sheer number of choices can be overwhelming! To narrow things down, lets focus on pizza places that have been **highly rated by fellow data scientists**. 
+
+Fortunately, we have the perfect data set for this!!
 
 Jared Lander, the organizer of New York Open Statistical Programming (https://nyhackr.org/), has been providing pizza and polling attendees at the regular meetups for many years.
 
@@ -23,7 +25,7 @@ Shiny App: https://pizzaframe.com/
 (1) Patsy's (2) Tappo (3) Williamsburg Pizza (4) Naples 45  (5) Bleeker Street Pizza
 
 ```{r, echo = FALSE, fig.align = 'center', out.width = '60%', results = 'markup'} 
-knitr::include_graphics("../../images/Top5_overall.jpg")  
+knitr::include_graphics("https://github.com/ArhamChoudhury/Blog_ArhamChoudhury/blob/main/images/Top5_overall.jpg?raw=true")  
 ```
 
 *Hang on a second!* Aren't polls often often skewed by low sample sizes? This is indeed something we should account for. The median number of votes per pizza place in this data set is 16. Lets use the slider in the shiny app to filter out any pizza place with less than 10 votes.
@@ -32,14 +34,20 @@ knitr::include_graphics("../../images/Top5_overall.jpg")
 (1) Tappo (2) Williamsburg Pizza (3) Rocky's  (4) Fiore's (5) Spunto
  
 ```{r, echo = FALSE, fig.align = 'center', out.width = '60%', results = 'markup'} 
-knitr::include_graphics("../../images/Top5_vote_filter.jpg")  
+knitr::include_graphics("https://github.com/ArhamChoudhury/Blog_ArhamChoudhury/blob/main/images/Top5_vote_filter.jpg?raw=true")  
 ```
 
 
+*One more wrinkle!* Jared has ordered pizza from some places more than once. Maybe those are better than the rest and should be analyzed as a separate group. This filter exists in the shiny app.
+
+**Top 5 - Only Among Repeat Orders**  
+(1) Tappo (2) Rocky's (3) Fiore's (4) Little Italy Pizza (5) Stella's Pizza
+```{r, echo = FALSE, fig.align = 'center', out.width = '60%', results = 'markup'} 
+knitr::include_graphics("https://github.com/ArhamChoudhury/Blog_ArhamChoudhury/blob/main/images/Top5_repeat_orders.jpg?raw=true")  
+```
 
 
-
-
+Next time you are in NYC, be sure to check out some of these pizza places!
 
 #
 
