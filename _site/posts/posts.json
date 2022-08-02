@@ -36,7 +36,7 @@
   {
     "path": "posts/2022-08-01-nyc-pizza/",
     "title": "NYC Pizza",
-    "description": "Whats a Good Pizza Place for a Data Scienctist in NYC",
+    "description": "Whats a Good Pizza Place for a Data Scienctist in NYC?",
     "author": [
       {
         "name": "Arham Choudhury",
@@ -45,9 +45,9 @@
     ],
     "date": "2022-08-01",
     "categories": [],
-    "contents": "\r\nLets say that you, a data scientist, are visiting NYC and would like\r\nto have some pizza. The sheer number of choices can be overwhelming! To\r\nnarrow things down, lets focus on pizza places that have been highly\r\nrated by fellow data scientists. Fortunately, the perfect data set for\r\nthis exercise exists!!\r\nJared Lander, the organizer of New York Open Statistical Programming\r\n(https://nyhackr.org/),\r\nhas been providing pizza and polling attendees at the regular meetups\r\nfor many years.\r\nfor an interactive look at this question, I used Jared’s pizza poll\r\ndata and built a very simple shiny web app.\r\nShiny App: https://pizzaframe.com/\r\nTop five pizza places by score are\r\n(1) Patsy’s (2) Tappo (3) Williamsburg Pizza (4) Naples 45 (5) Bleeker\r\nStreet Pizza\r\nTop 5 PizzaHang on a second! Aren’t polls often often skewed by low\r\nsample sizes? This is indeed something we should account for. The median\r\nnumber of votes per pizza place in this data set is 16. Lets use the\r\nslider in the shiny app to filter out any pizza place with less than 10\r\nvotes.\r\nTop 5 - filtered by 10 or more votes\r\n(1) Tappo (2) Williamsburg Pizza (3) Rocky’s (4) Fiore’s (5) Spunto\r\nTop 5 Filtered by Votesend\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2022-08-01T22:06:53-05:00",
+    "contents": "\r\nLets say that you, a data scientist, are visiting NYC and would like\r\nto have some pizza. The sheer number of choices can be overwhelming! To\r\nnarrow things down, lets focus on pizza places that have been highly\r\nrated by fellow data scientists. Fortunately, the perfect data set for\r\nthis exercise exists!!\r\nJared Lander, the organizer of New York Open Statistical Programming\r\n(https://nyhackr.org/),\r\nhas been providing pizza and polling attendees at the regular meetups\r\nfor many years.\r\nfor an interactive look at this question, I used Jared’s pizza poll\r\ndata and built a very simple shiny web app.\r\nShiny App: https://pizzaframe.com/\r\nTop five pizza places by score are\r\n(1) Patsy’s (2) Tappo (3) Williamsburg Pizza (4) Naples 45 (5) Bleeker\r\nStreet Pizza\r\n\r\n\r\n\r\nHang on a second! Aren’t polls often often skewed by low\r\nsample sizes? This is indeed something we should account for. The median\r\nnumber of votes per pizza place in this data set is 16. Lets use the\r\nslider in the shiny app to filter out any pizza place with less than 10\r\nvotes.\r\nTop 5 - filtered by 10 or more votes\r\n(1) Tappo (2) Williamsburg Pizza (3) Rocky’s (4) Fiore’s (5) Spunto\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/2022-08-01-nyc-pizza/../../images/Top5_overall.jpg",
+    "last_modified": "2022-08-01T22:16:26-05:00",
     "input_file": "nyc-pizza.knit.md"
   }
 ]

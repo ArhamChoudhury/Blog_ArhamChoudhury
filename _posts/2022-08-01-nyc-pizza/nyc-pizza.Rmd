@@ -1,7 +1,7 @@
 ---
 title: "NYC Pizza"
 description: |
-  Whats a Good Pizza Place for a Data Scienctist in NYC
+  Whats a Good Pizza Place for a Data Scienctist in NYC?
 author:
   - name: Arham Choudhury
     url: https://arhamchoudhury.com/
@@ -22,14 +22,18 @@ Shiny App: https://pizzaframe.com/
 **Top five pizza places by score are**  
 (1) Patsy's (2) Tappo (3) Williamsburg Pizza (4) Naples 45  (5) Bleeker Street Pizza
 
-![Top 5 Pizza](images/Top5_overall.jpg)
+```{r, echo = FALSE, fig.align = 'center', out.width = '60%', results = 'markup'} 
+knitr::include_graphics("../../images/Top5_overall.jpg")  
+```
 
 *Hang on a second!* Aren't polls often often skewed by low sample sizes? This is indeed something we should account for. The median number of votes per pizza place in this data set is 16. Lets use the slider in the shiny app to filter out any pizza place with less than 10 votes.
 
 **Top 5 - filtered by 10 or more votes**  
 (1) Tappo (2) Williamsburg Pizza (3) Rocky's  (4) Fiore's (5) Spunto
  
- ![Top 5 Filtered by Votes](images/Top5_vote_filter.jpg)
+```{r, echo = FALSE, fig.align = 'center', out.width = '60%', results = 'markup'} 
+knitr::include_graphics("../../images/Top5_vote_filter.jpg")  
+```
 
 
 
@@ -37,5 +41,5 @@ Shiny App: https://pizzaframe.com/
 
 
 
-# end
+#
 
