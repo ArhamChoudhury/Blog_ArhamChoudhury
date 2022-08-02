@@ -11,4 +11,4 @@ output:
     self_contained: false
 ---
 
-Inflation Charts here.
+Inflation Charts here. More to follow.
