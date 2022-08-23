@@ -9,22 +9,24 @@ date: 2022-08-01
 output:
   distill::distill_article:
     self_contained: false
-    code_folding: hide
+    code_folding: show
 ---
 
 *Executive Summary*: The recent interest rate hikes appear to have convinced forecasters and market participants that inflation 
 will be tamed to below 4% level within a year. Businesses and individuals should see this as a sign of some relief.
 
-```{r chart echo=FALSE}
-chart
+```{r, echo = FALSE, fig.align = 'center', out.width = '60%', results = 'markup'} 
+knitr::include_graphics("https://github.com/ArhamChoudhury/Blog_ArhamChoudhury/blob/main/images/inflation_exp.jpg?raw=true")  
 ```
-
 Note: Dotted line represents expected inflation 1-year from now.
-Solid line shows actual reported CPI inflation.
-Sources: Actual Inflation: Bureau of Labor Statistics, data is Monthly, not seasonally adjusted
-         Expected Inflation: Federal Reserve Bank of Cleveland
+Solid line shows actual reported CPI inflation.  
+
+Sources:  
+Actual Inflation: Bureau of Labor Statistics, data is Monthly, not seasonally adjusted
+Expected Inflation: Federal Reserve Bank of Cleveland
 
 
+Code for Reproducing the data and chart  
 
 ```{r code}
 
@@ -93,14 +95,5 @@ chart <- ggplot(data = filter(CPI_actual_plus_exp, type == "Actual"),
   theme(axis.text.x=element_text(angle=45, hjust=1, size = 8)) +
   geom_text_repel(data = filter(CPI_actual_plus_exp, date >= "2022-07-01"))
 chart
-
-
-
 ```
 
-
-
-
-
-
-# end
