@@ -1,18 +1,18 @@
 ---
-title: "Inflation"
+title: "US Inflation"
 description: |
-  Will US inflation last another year or more?
+  Will high inflation last another year or more?
 author:
   - name: Arham Choudhury
     url: https://arhamchoudhury.com/
-date: 2022-08-01
+date: 2022-08-02
 output:
   distill::distill_article:
     self_contained: false
     code_folding: show
 ---
 
-*Executive Summary*: The recent interest rate hikes appear to have convinced forecasters and market participants that inflation 
+**Executive Summary**: The recent interest rate hikes appear to have convinced forecasters and market participants that inflation 
 will be tamed to below 4% level within a year. Businesses and individuals should see this as a sign of some relief.
 
 ```{r, echo = FALSE, fig.align = 'center', out.width = '60%', results = 'markup'} 
