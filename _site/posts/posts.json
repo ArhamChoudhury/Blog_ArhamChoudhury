@@ -1,22 +1,5 @@
 [
   {
-    "path": "posts/welcome/",
-    "title": "Welcome to Arham's Blog",
-    "description": "Welcome! This is my data science blog.   \nTopics: R, Python & SQL",
-    "author": [
-      {
-        "name": "Arham Choudhury",
-        "url": "https://arhamchoudhury.com/"
-      }
-    ],
-    "date": "2022-08-01",
-    "categories": [],
-    "contents": "\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2022-08-01T17:04:19-05:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2022-08-01-inflation/",
     "title": "Inflation",
     "description": "Will US inflation last another year or more?",
@@ -49,5 +32,22 @@
     "preview": "https://github.com/ArhamChoudhury/Blog_ArhamChoudhury/blob/main/images/Top5_overall.jpg?raw=true",
     "last_modified": "2022-08-01T22:36:16-05:00",
     "input_file": "nyc-pizza.knit.md"
+  },
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to Arham's Blog",
+    "description": "Welcome! This is my data science blog.   \nTopics: R, Python & SQL",
+    "author": [
+      {
+        "name": "Arham Choudhury",
+        "url": "https://arhamchoudhury.com/"
+      }
+    ],
+    "date": "2022-07-31",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-08-23T12:48:59-05:00",
+    "input_file": "welcome.knit.md"
   }
 ]
