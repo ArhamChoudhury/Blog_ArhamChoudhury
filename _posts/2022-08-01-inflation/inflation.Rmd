@@ -9,6 +9,98 @@ date: 2022-08-01
 output:
   distill::distill_article:
     self_contained: false
+    code_folding: hide
 ---
 
-Inflation Charts here. More to follow.
+*Executive Summary*: The recent interest rate hikes appear to have convinced forecasters and market participants that inflation 
+will be tamed to below 4% level within a year. Businesses and individuals should see this as a sign of some relief.
+
+```{r chart echo=FALSE}
+chart
+```
+
+Note: Dotted line represents expected inflation 1-year from now.
+Solid line shows actual reported CPI inflation.
+Sources: Actual Inflation: Bureau of Labor Statistics, data is Monthly, not seasonally adjusted
+         Expected Inflation: Federal Reserve Bank of Cleveland
+
+
+
+```{r code}
+
+library(tidyverse)
+suppressPackageStartupMessages(library(tidyquant))
+library(timetk)
+library(scales)
+library(ggrepel)
+
+# Change vs 12 months ago Function
+YY <- function(x){
+  (x - lag(x,12))/lag(x,12)
+}
+
+# Actual Inflation
+# As of Aug 2022
+
+CPIAUCNS <- tq_get("CPIAUCNS", get = "economic.data", from = "2018-01-01") %>%
+  summarise_by_time(
+    .date_var = date,
+    .by = "month",
+    CPI_allitems_monthly = mean(price, na.rm = T)) %>%
+  mutate(CPI_YY = YY(CPI_allitems_monthly)*100) %>%
+  na.omit() %>%
+  filter(date >= "2022-01-01") %>%
+  select(date, CPI_YY) %>%
+  rename(value = CPI_YY) %>%
+  mutate(type = "Actual")
+CPIAUCNS
+
+
+EXPINF1YR <- tq_get("EXPINF1YR", get = "economic.data", from = "2018-01-01") %>%
+  summarise_by_time(
+    .date_var = date,
+    .by = "month",
+    CPI_exp_allitems_monthly = mean(price, na.rm = T)) %>%
+  na.omit() %>%
+  slice_tail() %>%
+  mutate(date = date + months(12)) %>%
+  rename(value = CPI_exp_allitems_monthly) %>%
+  mutate(type = "Expected")
+EXPINF1YR
+
+
+
+CPI_actual_plus_exp <- bind_rows(CPIAUCNS, EXPINF1YR) %>%
+  mutate(value = round(value,1))
+CPI_actual_plus_exp
+
+
+chart <- ggplot(data = filter(CPI_actual_plus_exp, type == "Actual"),
+         aes(x = date, y = value, label = value)) +
+  geom_line() +
+  geom_point() +
+  geom_line(data = filter(CPI_actual_plus_exp, date >= "2022-07-01"),
+            aes(x = date, y = value), linetype = "dashed") +
+  geom_point(data = filter(CPI_actual_plus_exp, type == "Expected"),
+             aes(x = date, y = value)) +
+  geom_hline(yintercept = 0) +
+  scale_y_continuous(labels = scales::number_format(accuracy = 0.1),
+                     breaks = pretty_breaks(10)) +
+  scale_x_date(date_breaks = "1 month",
+               date_labels = "%m-%y") +
+  labs(title = "Inflation: Actual & Expected",
+       y     = "Inflation (YoY %)", x = "Month") +
+  theme(axis.text.x=element_text(angle=45, hjust=1, size = 8)) +
+  geom_text_repel(data = filter(CPI_actual_plus_exp, date >= "2022-07-01"))
+chart
+
+
+
+```
+
+
+
+
+
+
+# end
